@@ -1,0 +1,252 @@
+@keyframes delete {
+  60% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
+  min-height: 100vh;
+  width: 95vw;
+}
+
+.h-2 {
+  font-size: 2.5rem;
+  margin: 0rem 0;
+}
+
+.h-4 {
+  font-size: 1.5rem;
+  margin: 0rem 0.5rem;
+}
+
+.h-4--b {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.h-4--light {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0;
+  color: rgb(107, 107, 107);
+}
+
+.h-5--light {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0;
+  color: rgb(172, 170, 170);
+}
+
+.h-5--blue {
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  color: rgb(36, 157, 255);
+}
+
+.home-page .nav-tabs {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  border: none !important;
+}
+.home-page .nav-tabs a {
+  border: none !important;
+  border-bottom: 1px solid rgb(204, 204, 204) !important;
+}
+
+.user-card {
+  display: flex;
+  width: 90%;
+  min-height: 15rem;
+  margin-top: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+.user-card_left {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-card_left #cr1 {
+  font-size: 3rem;
+}
+.user-card_left .v-line {
+  border-left: 6px solid rgb(205, 205, 205);
+  flex-grow: 1;
+}
+.user-card_left a {
+  color: rgb(205, 205, 205);
+}
+.user-card_body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.user-card_body--id {
+  min-height: 5rem;
+  padding-left: 1.5rem;
+}
+.user-card_body--content {
+  flex-grow: 1;
+  padding-left: 1.5rem;
+}
+.user-card_body--content p {
+  padding-left: 3.5rem;
+}
+
+#search {
+  margin-top: 4rem;
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(140, 140, 140) !important;
+  font-size: 1.2rem;
+}
+
+.user-card_left .fa-user-circle {
+  border-radius: 50%;
+  border: 2px solid rgb(36, 157, 255);
+}
+
+.user_header {
+  position: relative;
+  border-bottom: 1px solid rgb(126, 126, 126);
+}
+.user_header .user_head-img {
+  width: 100%;
+  height: 14rem;
+  background: url(./img/img1.png);
+  background-size: cover;
+  background-position: center;
+}
+.user_header #prifile_cr {
+  font-size: 5rem;
+  position: absolute;
+  bottom: -2.2rem;
+  left: 3rem;
+  color: rgb(91, 91, 91);
+}
+
+.user_personal-inf {
+  width: 100%;
+  padding: 4rem 3rem 10rem 3rem;
+}
+.user_personal-inf .company {
+  margin-top: 2rem;
+  width: 90%;
+}
+.user_personal-inf .company span {
+  margin-left: 0.5rem;
+}
+
+.user-page .nav-tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.user-page .nav-tabs * {
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.user-page .tab-content {
+  width: 100%;
+  background-color: rgb(147, 147, 147);
+}
+.user-page .tab-content .postOfUser {
+  width: 100%;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 4rem 3rem;
+  margin-top: 1.5rem;
+}
+.user-page .tab-content .postOfUser .post-top {
+  width: 100%;
+  height: 5rem;
+}
+.user-page .tab-content .postOfUser .post-top i {
+  font-size: 2.5rem;
+}
+.user-page .tab-content .postOfUser .post-body {
+  width: 100%;
+  flex-grow: 1;
+}
+.user-page .tab-content .postOfUser .post-footer {
+  border-top: 1px solid rgb(222, 222, 222);
+  padding-top: 2rem;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.user-page .tab-content .postOfUser .post-footer * {
+  font-size: 1.5rem;
+}
+
+.post-page .post-header {
+  width: 100%;
+  padding: 3rem;
+  background-color: rgba(0, 208, 255, 0.258);
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.post-page .post-header #prifile_cr {
+  font-size: 5rem;
+}
+.post-page .post-header span {
+  font-size: 2rem;
+}
+.post-page .comment-main {
+  width: 100%;
+  padding: 2rem 3rem;
+}
+.post-page .comment-main .comment-of-post {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+}
+.post-page .comment-main .comment-of-post .comment-left {
+  width: 5rem;
+  text-align: end;
+  padding-right: 1rem;
+}
+.post-page .comment-main .comment-of-post .comment-left i {
+  font-size: 3rem;
+}
+.post-page .comment-main .comment-of-post .comment-right {
+  flex-grow: 1;
+  background-color: rgb(225, 225, 225);
+  border-radius: 0 1rem 2rem 1rem;
+  padding: 1rem 2rem 2rem 2rem;
+}
+.post-page .comment-main .comment-of-post .comment-right .comment_user {
+  height: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */

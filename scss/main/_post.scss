@@ -1,0 +1,51 @@
+.post-page{
+    .post-header{
+        width: 100%;
+        padding: 3rem;
+        background-color: rgba(0, 208, 255, 0.258);
+        border-radius: 0 0 2rem 2rem;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        #prifile_cr{
+            font-size: 5rem;
+        }
+        span{
+            font-size: 2rem;
+            // color: rgb(194, 252, 255);
+            // background-color: rgb(28, 28, 28);
+            // padding: 2rem;
+            // border-radius: 1rem;
+        }
+    }
+    .comment-main{
+        width: 100%;
+        padding: 2rem 3rem;
+        .comment-of-post{
+            margin-top: 3rem;
+            width: 100%;
+            display: flex;
+            .comment-left{
+                width: 5rem;
+                text-align: end;
+                padding-right: 1rem;
+                i{
+                    font-size: 3rem;
+                }
+            }
+            .comment-right{
+                flex-grow: 1;
+                background-color: rgb(225, 225, 225);
+                border-radius: 0 1rem 2rem 1rem;
+                padding: 1rem 2rem 2rem 2rem;
+                .comment_user{
+                    height: 4rem;
+                }
+                // .comment_body{
+                
+                // }
+            }
+        }
+    }
+}
