@@ -1,7 +1,9 @@
-const search=document.querySelector("#search");
+const search_p=document.querySelector("#search");
 const home_page=document.querySelector("#home");
+const home_page_users=document.querySelector(".home-page #user .row");
 const header=document.querySelector("header");
 const main=document.querySelector("main");
+
 
 
 let first_users;
@@ -9,21 +11,24 @@ get_ajax('https://jsonplaceholder.typicode.com/users',function(obj){
     first_users=obj;
 })
 get_ajax('https://jsonplaceholder.typicode.com/posts',function(obj){
+    obj.map(show_posts);
+})
+get_ajax('https://jsonplaceholder.typicode.com/users',function(obj){
     obj.map(show_users);
 })
 
-
-// search.addEventListener('keyup',function(){
-//     for(var i=0;i<strings.length;i++){
-//             document.querySelector(`.li-${i}`).style.display="block";
-//     }
-//     for(var i=0;i<strings.length;i++){
-//         if(!strings[i].toLowerCase().trim().startsWith(search.value.toLowerCase().trim())){
-//             // console.log(search.value);
-//             document.querySelector(`.li-${i}`).style.display="none";
-//         }
-//     }
-// });
+// setTimeout(function(){
+    // search.addEventListener('keyup',function(){
+        // const cardInHome=document.querySelectorAll(".user-card");
+        // console.log(search);
+        // for(var i=0;i<strings.length;i++){
+        //     if(!strings[i].toLowerCase().trim().startsWith(search.value.toLowerCase().trim())){
+        //         // console.log(search.value);
+        //         document.querySelector(`.li-${i}`).style.display="none";
+        //     }
+        // }
+    // });
+// },1000)
 
 function get_ajax(url,ajax_fa){ 
     let xhr= new XMLHttpRequest();
@@ -39,7 +44,19 @@ function get_ajax(url,ajax_fa){
     xhr.send();
 }
 function show_users(item){ //show users in home page
-    home_page.innerHTML+= `     <div class="user-card">
+    home_page_users.innerHTML+=`<div class="col-sm-12">
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${item.name}</h5>
+                                        <p class="card-text">${item.email} <br>  <i class="fa-solid fa-location-dot"></i>  ${item.address.city}</p>
+                    
+                                        <a href="./html/user.html?id=${item.id}" class="btn btn-primary">see profile</a>
+                                    </div>
+                                    </div>
+                                </div>`
+}
+function show_posts(item){ //show users in home page
+    home_page.innerHTML+=      `<div class="user-card">
                                     <div class="user-card_left">
                                         <a href="./html/user.html?id=${item.userId}" class="fa-solid fa-user-circle" id="cr1"></a>
                                         <div class="v-line"></div>
@@ -47,7 +64,7 @@ function show_users(item){ //show users in home page
                                     </div>
                                     <div class="user-card_body">
                                         <div class="user-card_body--id">
-                                            <h4 class="h-4--b">${user_information(item.userId,'name')}</h4>
+                                            <a href="./html/user.html?id=${item.userId}" class="h-4--b">${user_information(item.userId,'name')}</a>
                                             <h2 class="h-5--blue">${user_information(item.userId,'username')}</h2>
                                         </div>
                                         <div class="user-card_body--content">
